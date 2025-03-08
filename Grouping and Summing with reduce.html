@@ -1,0 +1,9 @@
+<script>
+    let item = ["electronics", "clothing", "electronics", "toys", "clothing", "toys", "toys"]
+let res = item.reduce((acc, product) => {
+  acc[product] = (acc[product] || 0)+1
+  return acc;
+},{});
+   let sortedItem = Object.entries(res).sort((a,b) => b[1]-a[1])
+console.log(sortedItem);
+</script>
